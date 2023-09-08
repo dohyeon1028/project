@@ -1,0 +1,47 @@
+.filter_wrap{
+   width: 250px;
+   height: 300px;
+   position: absolute;
+   top: 300px;
+   left: 60px;
+   margin-bottom: 50px;
+   .close{
+      position: absolute;
+      right: 0;
+      font-size: 20px
+   }
+   >div{
+      width: 250px;
+      height: 50%;
+      border-bottom: 2px solid #aaa;
+      margin-bottom: 20px;
+      .filter_tit{
+         width: 100%;
+         font: bold 20px/1 "Phudu";
+         letter-spacing: 1.5px;
+         margin-bottom: 30px;
+      }
+      .filter_sublist{
+         display: flex;
+         flex-wrap: wrap;
+         label{
+            width: 100%;
+            margin-bottom: 5px;
+            &:hover{
+               span{
+                  color: #111;
+               }
+            }
+            input{
+               width: 12px;
+               height: 12px;
+            }
+            span{
+               font: 13px/1 "arial";
+               color: #aaa;
+               
+            }
+         }
+      }
+   }
+}
