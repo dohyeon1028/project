@@ -69,5 +69,41 @@
    }
 }
 
-
+@media screen and (max-width: 1179px) {
+   .NEW_prod_wrap{
+      min-height: 100%;
+      padding: 0px 30px;
+      margin: 0 auto;
+      @import "../common/filter_wrap";
+      .list_control_wrap{
+         width: calc(100% - 230px);
+         margin-left: 230px;
+         h2{
+            font: bold 28px/80px "Phudu";
+            height: 80px;
+         }
+         section{
+            width: 100%;   
+            article{
+               width: calc(100vw / 3 - 100px);
+               height: calc(100vw / 3);
+               .imgBox{
+                  height: calc(100vw / 3 - 100px);
+               }
+               figcaption{
+                  padding: 10px 12px 0;
+                  a{
+                     font: 12px/1 "Phudu";
+                     color: #999;
+                  }
+                  p{
+                     font: bold 12px/1 "Phudu";
+                     margin-top: 8px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
 

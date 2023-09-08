@@ -18,7 +18,7 @@ function nextSlide(){
     const initialValue = parseInt(panel.style.left);
 
     const targetValue = -200;
-    const unit = "vw";
+    const unit = "%";
 
     const startTime = performance.now();
 
@@ -31,9 +31,8 @@ function nextSlide(){
         if(progress < 1){
             requestAnimationFrame(animate);
         }else if(progress >= 1){
-            panel.style.left = "-100vw";
+            panel.style.left = "-100%";
             panel.append(panel.firstElementChild);
-            enableClick = true;
         }
 
     }
@@ -41,7 +40,7 @@ function nextSlide(){
 }
 
 function init(){
-    panel.style.left = "-100vw";
+    panel.style.left = "-100%";
     panel.prepend(panel.lastElementChild);
     
 }
@@ -64,6 +63,7 @@ window.addEventListener("scroll", ()=>{
 //youtube
 
 const vidList = document.querySelector(".vidList");
+const video_frame = vidList.querySelector(".video_frame");
 let key = "AIzaSyDo3ukttxmit7HO2U0lP8ekZyRlZeUAVZ0";
 let playlistId = "PLbpunYhud0VvdFsrmh_G73_-dGUcDPO67";
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}`;
@@ -106,7 +106,7 @@ fetch(url)
                 </article>
             `;
         })
-        vidList.innerHTML = result;
+        video_frame.innerHTML = result;
     })
 
 
@@ -132,7 +132,7 @@ vidList.addEventListener("click", (e) => {
 vidList.addEventListener("click",(e)=>{
     const pop = vidList.querySelector(".pop");
     const header = document.querySelector("header");
-    //
+    
     if(pop){
         const close = pop.querySelector("span");
         if(e.target == close){

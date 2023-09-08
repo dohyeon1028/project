@@ -115,10 +115,55 @@ header .util li a:first-child {
   font-weight: bold;
 }
 
+@media screen and (max-width: 1179px) {
+  .headerBox {
+    width: 100%;
+    height: 150px;
+  }
+  .headerBox.on {
+    height: 75px;
+  }
+  header {
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+  }
+  header h1 {
+    width: 150px;
+    left: 8%;
+  }
+  header #gnb {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+  header #gnb li {
+    width: 130px;
+  }
+  header #gnb li a {
+    font: bold 18px/1 "Phudu";
+    letter-spacing: 0px;
+  }
+  header #gnb li a::after {
+    bottom: -10px;
+  }
+  header .util {
+    width: 220px;
+    left: 85%;
+  }
+  header .util li a {
+    font: 10px/1 "arial";
+  }
+}
 #frame {
   position: relative;
   width: 100%;
-  height: 900px;
+  height: 56.25vw;
   overflow: hidden;
   margin-bottom: 50px;
 }
@@ -379,6 +424,143 @@ header .util li a:first-child {
   color: #fff;
 }
 
+@media screen and (max-width: 1179px) {
+  #frame {
+    margin-bottom: 10px;
+  }
+  #frame .panel {
+    height: 100%;
+    position: absolute;
+    display: flex;
+    left: -100vw;
+    cursor: pointer;
+  }
+  #frame .panel li {
+    width: 100vw;
+    height: 100%;
+  }
+  #frame .panel li img {
+    width: 100%;
+    height: 100%;
+  }
+  #banner {
+    width: 100%;
+  }
+  #banner .imgBox {
+    height: 10vw;
+  }
+  #banner .item_wrap .videoBox {
+    width: 60%;
+    height: 42vw;
+  }
+  #banner .item_wrap .imgBox {
+    width: 40%;
+    height: 42vw;
+  }
+  #banner .item_wrap .imgBox .btns li {
+    display: none;
+  }
+  #recommend {
+    width: 90%;
+    height: 30vw;
+    margin: 50px auto;
+  }
+  #recommend::before {
+    width: 100%;
+  }
+  #recommend h1 {
+    width: 50%;
+    margin: 0 auto 20px;
+    font: bold 24px/1 "Phudu";
+  }
+  #recommend .items_wrap {
+    top: 70px;
+  }
+  #recommend .items_wrap li:nth-of-type(1) {
+    left: -110%;
+  }
+  #recommend .items_wrap li:nth-of-type(2) {
+    left: 0%;
+  }
+  #recommend .items_wrap li:nth-of-type(3) {
+    left: -110%;
+  }
+  #recommend .items_wrap li article {
+    width: 17vw;
+    height: 17vw;
+  }
+  #recommend .items_wrap li article:hover .txt p {
+    transform: translateY(-15px);
+  }
+  #recommend .items_wrap li article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #recommend .items_wrap li article .txt {
+    width: 100%;
+    padding: 0 2px;
+  }
+  #recommend .items_wrap li article .txt p {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+  #recommend .items_wrap li article .txt p.brand {
+    font: 10px/1 "Phudu";
+    margin-top: 20px;
+  }
+  #recommend .items_wrap li article .txt p.prod_title {
+    font: 12px/1 "Phudu";
+    margin-top: 7px;
+  }
+  #recommend .items_wrap li article .txt p.prod_price {
+    font: bold 12px/1 "Phudu";
+    margin-top: 2px;
+  }
+  #recommend .prev {
+    top: 150px;
+    left: -40px;
+  }
+  #recommend .prev i {
+    font-size: 30px;
+  }
+  #recommend .next {
+    top: 150px;
+    right: -40px;
+  }
+  #recommend .next i {
+    font-size: 30px;
+  }
+  #full_banner {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  #full_banner section {
+    width: 100vw;
+    height: 56.25vw;
+  }
+  #full_banner section .imgBox {
+    margin-bottom: 20px;
+  }
+  #full_banner section .txtBox h1 {
+    font: bold 35px/1 "Phudu";
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  #full_banner section .txtBox h2 {
+    font: 15px/1 "Phudu";
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+  }
+  #full_banner section .btnBox {
+    width: 150px;
+    height: 40px;
+  }
+  #full_banner section .btnBox a {
+    font: 14px/1 "맑은 고딕";
+  }
+}
 .NEW_prod_wrap {
   width: 100vw;
   height: auto;
@@ -393,7 +575,6 @@ header .util li a:first-child {
   position: absolute;
   top: 300px;
   left: 60px;
-  margin-bottom: 50px;
 }
 .NEW_prod_wrap .filter_wrap .close {
   position: absolute;
@@ -430,6 +611,28 @@ header .util li a:first-child {
 .NEW_prod_wrap .filter_wrap > div .filter_sublist label span {
   font: 13px/1 "arial";
   color: #aaa;
+}
+@media screen and (max-width: 1179px) {
+  .NEW_prod_wrap .filter_wrap {
+    width: 150px;
+    height: 250px;
+    top: 200px;
+    left: 40px;
+  }
+  .NEW_prod_wrap .filter_wrap .close {
+    font-size: 18px;
+  }
+  .NEW_prod_wrap .filter_wrap > div {
+    width: 100%;
+    height: 50%;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_tit {
+    font: bold 18px/1 "Phudu";
+    margin-bottom: 15px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label span {
+    font: 12px/1 "arial";
+  }
 }
 .NEW_prod_wrap .list_control_wrap {
   width: calc(100% - 270px);
@@ -485,6 +688,109 @@ header .util li a:first-child {
   margin-top: 10px;
 }
 
+@media screen and (max-width: 1179px) {
+  .NEW_prod_wrap {
+    min-height: 100%;
+    padding: 0px 30px;
+    margin: 0 auto;
+  }
+  .NEW_prod_wrap .filter_wrap {
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    top: 300px;
+    left: 60px;
+  }
+  .NEW_prod_wrap .filter_wrap .close {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+  }
+  .NEW_prod_wrap .filter_wrap > div {
+    width: 250px;
+    height: 50%;
+    border-bottom: 2px solid #aaa;
+    margin-bottom: 20px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_tit {
+    width: 100%;
+    font: bold 20px/1 "Phudu";
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label:hover span {
+    color: #111;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label input {
+    width: 12px;
+    height: 12px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label span {
+    font: 13px/1 "arial";
+    color: #aaa;
+  }
+}
+@media screen and (max-width: 1179px) and (max-width: 1179px) {
+  .NEW_prod_wrap .filter_wrap {
+    width: 150px;
+    height: 250px;
+    top: 200px;
+    left: 40px;
+  }
+  .NEW_prod_wrap .filter_wrap .close {
+    font-size: 18px;
+  }
+  .NEW_prod_wrap .filter_wrap > div {
+    width: 100%;
+    height: 50%;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_tit {
+    font: bold 18px/1 "Phudu";
+    margin-bottom: 15px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label span {
+    font: 12px/1 "arial";
+  }
+}
+@media screen and (max-width: 1179px) {
+  .NEW_prod_wrap .list_control_wrap {
+    width: calc(100% - 230px);
+    margin-left: 230px;
+  }
+  .NEW_prod_wrap .list_control_wrap h2 {
+    font: bold 28px/80px "Phudu";
+    height: 80px;
+  }
+  .NEW_prod_wrap .list_control_wrap section {
+    width: 100%;
+  }
+  .NEW_prod_wrap .list_control_wrap section article {
+    width: calc(33.3333333333vw - 100px);
+    height: 33.3333333333vw;
+  }
+  .NEW_prod_wrap .list_control_wrap section article .imgBox {
+    height: calc(33.3333333333vw - 100px);
+  }
+  .NEW_prod_wrap .list_control_wrap section article figcaption {
+    padding: 10px 12px 0;
+  }
+  .NEW_prod_wrap .list_control_wrap section article figcaption a {
+    font: 12px/1 "Phudu";
+    color: #999;
+  }
+  .NEW_prod_wrap .list_control_wrap section article figcaption p {
+    font: bold 12px/1 "Phudu";
+    margin-top: 8px;
+  }
+}
 .BEST_prod_wrap {
   width: 100vw;
   height: auto;
@@ -499,7 +805,6 @@ header .util li a:first-child {
   position: absolute;
   top: 300px;
   left: 60px;
-  margin-bottom: 50px;
 }
 .BEST_prod_wrap .filter_wrap .close {
   position: absolute;
@@ -536,6 +841,28 @@ header .util li a:first-child {
 .BEST_prod_wrap .filter_wrap > div .filter_sublist label span {
   font: 13px/1 "arial";
   color: #aaa;
+}
+@media screen and (max-width: 1179px) {
+  .BEST_prod_wrap .filter_wrap {
+    width: 150px;
+    height: 250px;
+    top: 200px;
+    left: 40px;
+  }
+  .BEST_prod_wrap .filter_wrap .close {
+    font-size: 18px;
+  }
+  .BEST_prod_wrap .filter_wrap > div {
+    width: 100%;
+    height: 50%;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_tit {
+    font: bold 18px/1 "Phudu";
+    margin-bottom: 15px;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_sublist label span {
+    font: 12px/1 "arial";
+  }
 }
 .BEST_prod_wrap .list_control_wrap {
   width: calc(100% - 270px);
@@ -729,12 +1056,18 @@ header .util li a:first-child {
   position: relative;
   overflow: hidden;
 }
-#football .custom_zone .vidList article {
+#football .custom_zone .vidList .video_frame {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  width: 711.18px;
-  height: 669.87px;
+  left: 0%;
 }
-#football .custom_zone .vidList article .bg {
+#football .custom_zone .vidList .video_frame article {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#football .custom_zone .vidList .video_frame article .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -743,37 +1076,37 @@ header .util li a:first-child {
   object-fit: cover;
   z-index: -1;
 }
-#football .custom_zone .vidList article .pic {
+#football .custom_zone .vidList .video_frame article .pic {
   display: block;
   margin: 80px auto 0;
   width: 650px;
   height: 350px;
 }
-#football .custom_zone .vidList article .pic img {
+#football .custom_zone .vidList .video_frame article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
 }
-#football .custom_zone .vidList article .con {
+#football .custom_zone .vidList .video_frame article .con {
   width: 640px;
   margin: 40px auto 0;
   position: absolute;
   top: 65%;
   left: 30px;
 }
-#football .custom_zone .vidList article .con h2 {
+#football .custom_zone .vidList .video_frame article .con h2 {
   font: bold 40px/1 "Phudu";
   letter-spacing: 1px;
   margin-bottom: 15px;
   width: 100%;
 }
-#football .custom_zone .vidList article .con p {
+#football .custom_zone .vidList .video_frame article .con p {
   font: bold 18px/1 "Phudu";
   letter-spacing: 1px;
   margin-bottom: 30px;
 }
-#football .custom_zone .vidList article .con a {
+#football .custom_zone .vidList .video_frame article .con a {
   display: block;
   width: 200px;
   height: 50px;
@@ -784,11 +1117,11 @@ header .util li a:first-child {
   color: #fff;
   cursor: pointer;
 }
-#football .custom_zone .vidList article .con a:hover {
+#football .custom_zone .vidList .video_frame article .con a:hover {
   background-color: #fff;
   color: #000;
 }
-#football .custom_zone .vidList .pop {
+#football .custom_zone .vidList .video_frame .pop {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -801,7 +1134,7 @@ header .util li a:first-child {
   justify-content: center;
   align-items: center;
 }
-#football .custom_zone .vidList .pop .btnClose {
+#football .custom_zone .vidList .video_frame .pop .btnClose {
   position: absolute;
   top: 50px;
   right: 50px;
@@ -1238,6 +1571,117 @@ footer .inner .footer_bottom .part2 .legal_moreView p a {
 footer .inner .footer_bottom .part2 .legal_moreView p a:hover {
   background-color: #fff;
   color: #111;
+}
+
+@media screen and (max-width: 1179px) {
+  footer {
+    height: 350px;
+  }
+  footer .inner {
+    width: 899px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 25px 0px;
+  }
+  footer .inner .footer_body .footer_body_ul {
+    width: 650px;
+  }
+  footer .inner .footer_body .footer_body_ul ul {
+    padding: 0 4px;
+  }
+  footer .inner .footer_body .footer_body_ul ul:first-child li a {
+    font: 13px/1 "Phudu";
+  }
+  footer .inner .footer_body .footer_body_ul ul:nth-of-type(2) li:first-child, footer .inner .footer_body .footer_body_ul ul:nth-of-type(3) li:first-child {
+    height: 18px;
+  }
+  footer .inner .footer_body .footer_body_ul ul:nth-of-type(2) li:first-child a, footer .inner .footer_body .footer_body_ul ul:nth-of-type(3) li:first-child a {
+    font: 13px/1 "Phudu";
+    color: #fff;
+  }
+  footer .inner .footer_body .footer_body_ul ul li {
+    margin-bottom: 5px;
+    width: 200px;
+    height: 18px;
+  }
+  footer .inner .footer_body .footer_body_ul ul li a {
+    font: bold 12px/1 "Phudu";
+  }
+  footer .inner .footer_bottom {
+    width: 899px;
+    height: 40%;
+    bottom: 0px;
+  }
+  footer .inner .footer_bottom .part1 {
+    width: 100%;
+  }
+  footer .inner .footer_bottom .part1 .part1_left i {
+    font-size: 12px;
+  }
+  footer .inner .footer_bottom .part1 .part1_left span {
+    font-size: 9px/1 "맑은 고딕";
+  }
+  footer .inner .footer_bottom .part1 .part1_left p {
+    font-size: 9px/1 "arial";
+    margin: 0 6px;
+  }
+  footer .inner .footer_bottom .part1 .part1_right li {
+    margin-left: 15px;
+  }
+  footer .inner .footer_bottom .part1 .part1_right li a {
+    font: bold 11px/1 "맑은 고딕";
+  }
+  footer .inner .footer_bottom .part2 {
+    padding-top: 10px;
+  }
+  footer .inner .footer_bottom .part2 a, footer .inner .footer_bottom .part2 span {
+    font: 11px/1.2 "맑은 고딕";
+  }
+  footer .inner .footer_bottom .part2 p {
+    font: 11px/1.3 "맑은 고딕";
+    padding: 0 8px 0 8px;
+  }
+  footer .inner .footer_bottom .part2 .legal_section p:first-child a {
+    top: 45%;
+    right: 12px;
+    border-radius: 7px;
+    padding: 0 4px;
+  }
+  footer .inner .footer_bottom .part2 .legal_section p:first-child a:hover {
+    background-color: #fff;
+    color: #111;
+  }
+  footer .inner .footer_bottom .part2 .payment_information a {
+    margin: 2px 0 0 0px;
+    border-radius: 10px;
+    color: #aaa;
+    padding: 0 3px;
+    cursor: pointer;
+  }
+  footer .inner .footer_bottom .part2 .payment_information a:hover {
+    background-color: #fff;
+    color: #111;
+  }
+  footer .inner .footer_bottom .part2 .legal_moreView {
+    width: 50%;
+    padding-top: 30px;
+    float: left;
+  }
+  footer .inner .footer_bottom .part2 .legal_moreView p {
+    font: 12px/1.4 "맑은 고딕";
+  }
+  footer .inner .footer_bottom .part2 .legal_moreView p a {
+    margin-left: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #aaa;
+    padding: 0 3px;
+    cursor: pointer;
+  }
+  footer .inner .footer_bottom .part2 .legal_moreView p a:hover {
+    background-color: #fff;
+    color: #111;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

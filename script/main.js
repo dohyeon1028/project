@@ -83,23 +83,29 @@ nextBtn.addEventListener("click", ()=>{
 
 const sections = document.querySelectorAll("#full_banner section");
 
+for(let i = 0; i < 4; i++){
+    (i % 2 == 0) ? sections[i].style.left = "-100%" : sections[i].style.right = "-100%";
+    sections[i].style.opacity = "0";
+}
+const section_Y = [0];
+for(let el of sections){
+    section_Y.push(el.offsetTop);
+}
+// console.log(section_Y);
+
 window.addEventListener("scroll", ()=>{
     const scroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-    console.log(scroll);
+    // console.log(scroll);
 
-    const section_Y = [1800, 2600 , 3400, 4300];
+    
+
+    
     
     for(let i = 0; i < 4; i++){
         if(scroll >= section_Y[i]){
             (i % 2 == 0) ? sections[i].style.left = "0" : sections[i].style.right = "0";
             sections[i].style.opacity = "1";
-        }else{
-            (i % 2 == 0) ? sections[i].style.left = "-100%" : sections[i].style.right = "-100%";
-            sections[i].style.opacity = "0";
         }
     }
 
-    
-
-    
 })

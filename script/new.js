@@ -6,12 +6,12 @@ articles.forEach((el, index) => {
         
         setTimeout(() => {
             el.querySelector(".after").style.opacity = "1";
-        }, 100);
+        }, 30);
     })
     el.querySelector(".imgBox").addEventListener("mouseleave", ()=>{
         setTimeout(() => {
             el.querySelector(".before").style.opacity = "1";
-        }, 100);
+        }, 50);
         el.querySelector(".after").style.opacity = "0";
     })
 });

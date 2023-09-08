@@ -1,7 +1,7 @@
 #frame{
     position: relative;
     width: 100%;
-    height: 900px;
+    height: calc(100vw / (16 / 9));
     overflow: hidden;
     margin-bottom: 50px;
     .panel{
@@ -266,6 +266,164 @@
                 border: 1px solid #fff;
                 a{
                     color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1179px){
+    #frame{
+        margin-bottom: 10px;
+        .panel{
+            height: 100%;
+            position: absolute;
+            display: flex;
+            left: -100vw;
+            cursor: pointer;
+            li{
+                width: 100vw;
+                height: 100%;
+               img{
+                width: 100%;
+                height: 100%;
+               } 
+            }
+        }
+        
+    }
+    
+    #banner{
+        width: 100%;
+        .imgBox{
+            height: 10vw;
+        }
+        .item_wrap{
+            .videoBox{
+                width: 60%;
+                height: 42vw;
+            }
+            .imgBox{
+                width: 40%;
+                height: 42vw;
+                
+                .btns{
+                    li{
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    #recommend{
+        width: 90%;
+        height: 30vw;
+        margin: 50px auto;
+        &::before{
+            width: 100%;
+        }
+        h1{
+            width: 50%;
+            margin: 0 auto 20px;
+            font: bold 24px/1 "Phudu";
+        }
+        .items_wrap{
+            top: 70px;
+            li{
+                &:nth-of-type(1){
+                    left: -110%;
+                }
+                &:nth-of-type(2){
+                    left: 0%;
+                }
+                &:nth-of-type(3){
+                    left: -110%;
+                }
+                article{
+                    width: 17vw;
+                    height: 17vw;
+                    &:hover{
+                        .txt{
+                            p{
+                                transform: translateY(-15px);
+                            }
+                        }
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .txt{
+                        width: 100%;
+                        padding: 0 2px;
+                        
+                        p{
+                            opacity: 1;
+                            transform: translateY(-15px);
+                            &.brand{
+                                font: 10px/1 "Phudu";
+                                margin-top: 20px;
+                            }
+                            &.prod_title{
+                                font: 12px/1 "Phudu";
+                                margin-top: 7px;
+                            }
+                            &.prod_price{
+                                font: bold 12px/1 "Phudu";
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+                        
+                }
+            }
+        }
+        .prev{
+            top: 150px;
+            i{
+                font-size: 30px;
+            }
+            left: -40px;
+        }
+        .next{
+            top: 150px;
+            i{
+                font-size: 30px;
+            }
+            right: -40px;
+        }
+    }
+    
+    #full_banner{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        section{
+            width: 100vw;
+            height: calc(100vw / (16 / 9));
+            .imgBox{
+                margin-bottom: 20px;
+            }
+            .txtBox{
+                h1{
+                    font: bold 35px/1 "Phudu";
+                    letter-spacing: 1px;
+                    margin-bottom: 15px;
+                }
+                h2{
+                    font: 15px/1 "Phudu";
+                    letter-spacing: -2px;
+                    margin-bottom: 15px;
+                }
+            }
+            .btnBox{
+                width: 150px;
+                height: 40px;
+                a{
+                    font: 14px/1 "맑은 고딕";
                 }
             }
         }
